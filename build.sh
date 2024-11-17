@@ -16,12 +16,15 @@ DIST_DIR="dist"
 
 if [ -d "$OUTPUT_DIR" ]; then
   mkdir -p $DIST_DIR
-  cp $OUTPUT_DIR/*.js $DIST_DIR/
-  cp $OUTPUT_DIR/*.js.map $DIST_DIR/
+
+  # Copy all JS files and source maps to the dist directory
+  find $OUTPUT_DIR -name "*.js" -exec cp {} $DIST_DIR/ \;
+  find $OUTPUT_DIR -name "*.js.map" -exec cp {} $DIST_DIR/ \;
+
+  # Dynamically create HTML with the correct script src
+  JS_FILE=$(ls $DIST_DIR/*.js | awk -F/ '{print $NF}' | grep -v 'module' | head -n 1)
+  echo "<html><head><title>Livechart</title></head><body><script type=\"module\" src=\"$JS_FILE\"></script></body></html>" > $DIST_DIR/index.html
 else
   echo "Build failed: $OUTPUT_DIR directory not found"
   exit 1
 fi
-
-# Copy an index.html file to dist for entry point
-echo '<html><head><title>Livechart</title></head><body><script type="module" src="app.min.js"></script></body></html>' > $DIST_DIR/index.html
