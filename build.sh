@@ -22,3 +22,6 @@ else
   echo "Build failed: $OUTPUT_DIR directory not found"
   exit 1
 fi
+
+# Copy an index.html file to dist for entry point
+echo '<html><head><title>Livechart</title></head><body><script type="module" src="app.min.js"></script></body></html>' > $DIST_DIR/index.html
