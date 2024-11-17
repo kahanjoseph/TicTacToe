@@ -8,6 +8,8 @@ import livechart.ModalComponent
 
 // Import the TicTacToe and Player classes
 import livechart.TicTacToe
+import livechart.ToggleButton
+import livechart.GameDiv
 import livechart.Player
 
 @main
@@ -24,7 +26,7 @@ object Main {
   var emptyBoard = Array.fill(3, 3)(0) // A 3x3 empty board
   val xVar = Var(false) // Variable to track if X is AI
   val oVar = Var(false) // Variable to track if O is AI
-  val gaming = Var(false) // Variable to track if the game is ongoing
+  val gaming: Var[Boolean] = Var(false) // Variable to track if the game is ongoing
 
   val playerX = Player(1, false) // Initialize Player X
   val playerO = Player(2, false) // Initialize Player O
@@ -48,23 +50,6 @@ object Main {
   // Function to hide the modal
   def hideModal(): Unit = {
     isModalVisible.set(false)
-  }
-
-  // Function to toggle button display and state
-  def toggleElement(
-                     toggle: Var[Boolean],
-                     textOn: String,
-                     textOff: String,
-                     colors: String = "bg-gray-600 text-white hover:bg-gray-900"
-                   ): Element = {
-    button(
-      cls := s"w-40 px-6 py-9 mb-2 text-xl font-semibold shadow-sm $colors",
-      onClick --> { _ =>
-        val newToggleState = !toggle.now()
-        toggle.set(newToggleState)
-      },
-      child.text <-- toggle.signal.map(isOn => if (isOn) textOn else textOff) // Dynamic text based on toggle state
-    )
   }
 
   // Function to create the main application element
@@ -119,44 +104,11 @@ object Main {
       cls := "mx-auto max-w-7xl sm:px-6 lg:px-8 grid grid-cols-3 my-20",
       div(
         cls := "col-span-1 grid grid-cols-1",
-        toggleElement(xVar, "X is set to AI", "X is set to human"),
-        toggleElement(oVar, "O is set to AI", "O is set to human"),
-        toggleElement(gaming, "End Game", "Start Game", "bg-green-600 text-white hover:bg-green-900"),
+        ToggleButton(xVar, "X is set to AI", "X is set to human"),
+        ToggleButton(oVar, "O is set to AI", "O is set to human"),
+        ToggleButton(gaming, "End Game", "Start Game", "bg-green-600 text-white hover:bg-green-900"),
       ),
-      div(
-        cls := "col-span-2",
-        // Conditionally render the game board based on the gaming state
-        child <-- gaming.signal.map { isGaming =>
-          if (isGaming) {
-            div(
-              cls := "",
-              child <-- gameSignal.signal.map { game =>
-                div(
-                  cls := "size-96 bg-white grid grid-cols-3 bg-red-300",
-                  game.board.zipWithIndex.flatMap { case (row, rowIndex) =>
-                    row.zipWithIndex.map { case (cell, colIndex) =>
-                      div(
-                        cls := "border-2 border-black flex justify-center items-center",
-                        onClick.mapTo((rowIndex, colIndex)) --> { case (ri, ci) => handleCellClick(ri, ci) },
-                        div(
-                          cls := "h-7 w-7 text-center flex items-center text-5xl",
-                          cell match {
-                            case 1 => "X"
-                            case 2 => "O"
-                            case _ => ""
-                          }
-                        )
-                      )
-                    }
-                  }
-                )
-              }
-            )
-          } else {
-            div() // Render an empty div when not gaming
-          }
-        }
-      ),
+      GameDiv(gameSignal, gaming),
       child <-- isModalVisible.signal.map { visible =>
         if (visible) ModalComponent(modalTitle, hideModal, isModalVisible.signal) else emptyNode
       }
