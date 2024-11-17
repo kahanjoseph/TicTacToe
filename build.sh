@@ -12,12 +12,12 @@ sbt livechart/fullLinkJS
 
 # Locate the output directory for livechart project
 OUTPUT_DIR=$(find "src/main/scala/ticTacToe/target/scala-3.3.3" -type d -name "livechart-opt")
-PUBLIC_DIR="public"
+DIST_DIR="dist"
 
 if [ -d "$OUTPUT_DIR" ]; then
-  mkdir -p $PUBLIC_DIR
-  cp $OUTPUT_DIR/*.js $PUBLIC_DIR/
-  cp $OUTPUT_DIR/*.js.map $PUBLIC_DIR/
+  mkdir -p $DIST_DIR
+  cp $OUTPUT_DIR/*.js $DIST_DIR/
+  cp $OUTPUT_DIR/*.js.map $DIST_DIR/
 else
   echo "Build failed: $OUTPUT_DIR directory not found"
   exit 1
