@@ -1,6 +1,12 @@
-import { defineConfig } from "vite";
-import scalaJSPlugin from "@scala-js/vite-plugin-scalajs";
+import { defineConfig } from 'vite'
+import viteScalaJS from '@scala-js/vite-plugin-scalajs'
 
 export default defineConfig({
-    plugins: [scalaJSPlugin()],
-});
+    plugins: [
+        viteScalaJS()
+    ],
+    build: {
+        outDir: 'dist', // Output directory for the build
+        sourcemap: true
+    }
+})
