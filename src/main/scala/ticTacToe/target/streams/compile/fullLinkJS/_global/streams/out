@@ -1,0 +1,29 @@
+[info] Full optimizing C:\ticTacToe\src\main\scala\ticTacToe\target\scala-3.3.3\livechart-opt
+[debug] Linker: Compute reachability: 905454 us
+[debug] Linker: Assemble LinkedClasses: 64598 us
+[debug] Linker: Check IR: 175307 us
+[debug] Linker: 1193931 us
+[debug] Optimizer: Batch mode: true
+[debug] Optimizer: Incremental part: 151215 us
+[debug] Optimizer: Elidable constructors: 8302 us
+[debug] Optimizer: Optimizing 5478 methods.
+[debug] Optimizer: Optimizer part: 1341041 us
+[debug] Optimizer: 1518943 us
+[debug] Refiner: Compute reachability: 148636 us
+[debug] Refiner: Assemble LinkedClasses: 17329 us
+[debug] Refiner: 169267 us
+[debug] Module Splitter: Calculate Dependency Info: 4364 us
+[debug] Module Splitter: Analyze Modules: 70482 us
+[debug] Module Splitter: Assemble Modules: 16836 us
+[debug] Module Splitter: 95615 us
+[debug] Emitter: Generate Classes: 880098 us
+[debug] Emitter: Write trees: 74472 us
+[debug] Emitter: Class tree cache stats: reused: 0 -- invalidated: 448
+[debug] Emitter: Method tree cache stats: reused: 0 -- invalidated: 2234
+[debug] Emitter: Pre prints: 3208
+[debug] Name compressor: Collect property names to avoid: 2802 us
+[debug] Name compressor: Allocate property names: 18629 us
+[debug] Name compressor: Allocate ancestor names: 3537 us
+[debug] Emitter: 1044882 us
+[debug] BasicBackend: Write result: 292382 us
+[debug] BasicBackend: total modules: 8; re-written: 8
