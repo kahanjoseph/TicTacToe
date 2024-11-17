@@ -10,8 +10,8 @@ export PATH=$PATH:$(pwd)/sbt/sbt/bin
 # Run the sbt command to build the Scala.js project using fullLinkJS
 sbt livechart/fullLinkJS
 
-# Check if the output directory exists and move the build output to the public directory
-OUTPUT_DIR="src/main/scala/ticTacToe/target/scala-3.3.3"
+# Locate the output directory for livechart project
+OUTPUT_DIR=$(find "src/main/scala/ticTacToe/target/scala-3.3.3" -type d -name "livechart-opt")
 PUBLIC_DIR="public"
 
 if [ -d "$OUTPUT_DIR" ]; then
