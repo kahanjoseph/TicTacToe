@@ -1,13 +1,12 @@
 import org.scalajs.linker.interface.ModuleSplitStyle
 
-lazy val livechart = project.in(file("./src/main/scala/ticTacToe"))
+lazy val livechart = project.in(file("src/main/scala/ticTacToe"))
   .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
   .settings(
     scalaVersion := "3.3.3",
 
     // Tell Scala.js that this is an application with a main method
     scalaJSUseMainModuleInitializer := true,
-
 
     /* Configure Scala.js to emit modules in the optimal way to
      * connect to Vite's incremental reload.
@@ -19,7 +18,8 @@ lazy val livechart = project.in(file("./src/main/scala/ticTacToe"))
     scalaJSLinkerConfig ~= {
       _.withModuleKind(ModuleKind.ESModule)
         .withModuleSplitStyle(
-          ModuleSplitStyle.SmallModulesFor(List("livechart")))
+          ModuleSplitStyle.SmallModulesFor(List("livechart"))
+        )
     },
 
     /* Depend on the scalajs-dom library.
