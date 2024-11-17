@@ -3,7 +3,10 @@ import viteScalaJS from '@scala-js/vite-plugin-scalajs'
 
 export default defineConfig({
     plugins: [
-        viteScalaJS()
+        viteScalaJS({
+            projectFile: './build.sbt', // Specify where your build.sbt is located
+            // Add other specific configurations if needed
+        })
     ],
     build: {
         outDir: 'dist', // Output directory for the build
