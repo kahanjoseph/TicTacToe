@@ -1,0 +1,11 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E018] Syntax Error: C:\xampp\htdocs\site_every_day\ticTacToe\src\main\scala\ticTacToe\TicTacToe.scala:20:30 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m20 |[0m[33mdef[0m [36mcounterButton[0m(): [35mElement[0m =[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                              ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                              expression expected but [31mval[0m found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: C:\xampp\htdocs\site_every_day\ticTacToe\src\main\scala\ticTacToe\TicTacToe.scala:64:4 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m64 |[0m    end Main[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m    ^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    duplicate end marker[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

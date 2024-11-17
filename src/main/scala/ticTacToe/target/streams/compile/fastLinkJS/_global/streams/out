@@ -1,0 +1,25 @@
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing C:\xampp\htdocs\site_every_day\ticTacToe\src\main\scala\ticTacToe\target\scala-3.3.3\livechart-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 118861 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 15798 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: 173857 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Batch mode: false[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 38399 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Elidable constructors: 692 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizing 4 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 85407 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 130015 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 57035 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 12368 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 70188 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 643 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 6467 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 3067 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 10413 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 75526 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 4179 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 462 -- invalidated: 4[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: reused: 2244 -- invalidated: 4[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Pre prints: 13[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: 90720 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 120751 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: total modules: 8; re-written: 4[0m
