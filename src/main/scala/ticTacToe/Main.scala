@@ -87,7 +87,7 @@ object Main {
 
     div(
       cls := "mx-auto max-w-7xl sm:px-6 lg:px-8 grid grid-cols-3 my-20",
-      div(cls := "col-span-1",
+      div(cls := "col-span-1 grid grid-cols-1",
         toggleElement(xVar, "X is set to AI", "X is set to human"),
         toggleElement(oVar, "O is set to AI", "O is set to human"),
         toggleElement(gaming, "End Game", "Start Game", "bg-green-600 text-white hover:bg-green-900")
