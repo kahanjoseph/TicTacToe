@@ -9,7 +9,7 @@ case class TicTacToe(
                       won: Int = 0, // Game won status: 0 = not won, 1 = player X, 2 = player O
                       player1: Player,
                       player2: Player,
-                      currentTurn: Player,
+                      currentTurn: Option[Player] = None
                     ){
   // Define the winning lines for TicTacToe
   val winningLines: Vector[Vector[(Int, Int)]] = Vector(
@@ -66,7 +66,7 @@ case class TicTacToe(
       var emptyCells: List[List[Int]] = List()
 
       for (cell <- line) {
-        if (board(cell._1)(cell._2) == currentTurn.turn) {
+        if (board(cell._1)(cell._2) == currentTurn.map(_.turn).getOrElse(-1)) {
           samePlayerCells = samePlayerCells :+ List(cell._1, cell._2)
         } else if (board(cell._1)(cell._2) == 0) {
           emptyCells = emptyCells :+ List(cell._1, cell._2)
@@ -110,9 +110,9 @@ case class TicTacToe(
     if(won != 0){
       this
     }else if(board(x)(o) == 0){
-      val updatedBoard = board.updated(x, board(x).updated(o, currentTurn.turn)) // Update board
+      val updatedBoard = board.updated(x, board(x).updated(o, currentTurn.map(_.turn).getOrElse(-1))) // Update board
       val won = checkIfWon(updatedBoard) // Check if the move results in a win
-      copy(board = updatedBoard, currentTurn = if (currentTurn == player1) player2 else player1, won = won) // Return updated game state
+      copy(board = updatedBoard, currentTurn = if (currentTurn.contains(player1)) Some(player2) else Some(player1), won = won) // Return updated game state
     }else{
       println("Invalid move! Try again.")
       this // Return the same instance if the move is invalid

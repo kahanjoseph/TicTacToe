@@ -28,7 +28,7 @@ object Main {
 
   val playerX = Player(1, false) // Initialize Player X
   val playerO = Player(2, false) // Initialize Player O
-  var gameSignal: Var[TicTacToe] = Var(TicTacToe(emptyBoard, 0, playerX, playerO, playerX)) // Initialize the game state with proper parameters
+  var gameSignal: Var[TicTacToe] = Var(TicTacToe(emptyBoard, 0, playerX, playerO)) // Initialize the game state with proper parameters
 
   // Function to handle cell clicks in the game board
   def handleCellClick(rowIndex: Int, colIndex: Int): Unit = {
@@ -74,29 +74,24 @@ object Main {
     // Observer to handle game state changes
     val gamingObserver = Observer[Boolean] { isGameActive =>
       val player1 = Player(1, xVar.now())
-      gameSignal.update(_ => TicTacToe(emptyBoard, 0, player1, Player(2, oVar.now()), player1))
 
       if (isGameActive) {
-        if (xVar.now()) {
-          gameSignal.update { currentGame =>
-            val move: List[Int] = currentGame.computerMove
-            currentGame.makeMove(move(0), move(1))
-          }
-        }
+        gameSignal.update(_ => TicTacToe(emptyBoard, 0, player1, Player(2, oVar.now()), Some(player1)))
+      }else{
+        gameSignal.update(_ => TicTacToe(emptyBoard, 0, player1, Player(2, oVar.now())))
       }
     }
 
     // Attach the observer to the signal
     gaming.signal.addObserver(gamingObserver)(localOwner)
 
-    // Observer to display the current player's turn and handle AI moves
-    val currentTurnObserver = Observer[Player] { player =>
-      if (gaming.now() && player.isAI) {
+    val currentTurnObserver = Observer[Option[Player]] {
+      case Some(player) if gaming.now() && player.isAI =>
         gameSignal.update { currentGame =>
           val move: List[Int] = currentGame.computerMove
           currentGame.makeMove(move(0), move(1))
         }
-      }
+      case _ => // Handle None or player who is not AI if necessary
     }
 
     // Observer to detect turn changes and trigger currentTurnObserver only on change
