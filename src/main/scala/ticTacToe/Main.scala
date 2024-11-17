@@ -73,15 +73,15 @@ object Main {
 
     // Observer to handle game state changes
     val gamingObserver = Observer[Boolean] { isGameActive =>
-      var player1 = Player(1, xVar.now())
+      val player1 = Player(1, xVar.now())
       gameSignal.update(_ => TicTacToe(emptyBoard, 0, player1, Player(2, oVar.now()), player1))
 
       if (isGameActive) {
         if (xVar.now()) {
-          gameSignal.update( currentGame => {
+          gameSignal.update { currentGame =>
             val move: List[Int] = currentGame.computerMove
             currentGame.makeMove(move(0), move(1))
-          })
+          }
         }
       }
     }
@@ -104,16 +104,16 @@ object Main {
       .addObserver(currentTurnObserver)(localOwner)
 
     // Observer to check if the game is over by observing the won field specifically
-    val gameOverObserver = Observer[Int] { won => {
-      if(won == 1 || won == 2){
+    val gameOverObserver = Observer[Int] { won =>
+      if (won == 1 || won == 2) {
         val winner = if (won == 1) "X" else "O"
         modalTitle = s"${winner} has won!!"
         showModal()
-      }else if(won == 3){
+      } else if (won == 3) {
         modalTitle = "Stale Mate"
         showModal()
       }
-    }}
+    }
 
     // Observe changes in the won field
     gameSignal.signal.map(_.won).distinct
@@ -122,7 +122,8 @@ object Main {
     // Create and return the main app layout
     div(
       cls := "mx-auto max-w-7xl sm:px-6 lg:px-8 grid grid-cols-3 my-20",
-      div(cls := "col-span-1 grid grid-cols-1",
+      div(
+        cls := "col-span-1 grid grid-cols-1",
         toggleElement(xVar, "X is set to AI", "X is set to human"),
         toggleElement(oVar, "O is set to AI", "O is set to human"),
         toggleElement(gaming, "End Game", "Start Game", "bg-green-600 text-white hover:bg-green-900"),
