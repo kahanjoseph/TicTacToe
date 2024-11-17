@@ -1,29 +1,29 @@
 [info] Full optimizing C:\ticTacToe\src\main\scala\ticTacToe\target\scala-3.3.3\livechart-opt
-[debug] Linker: Compute reachability: 905454 us
-[debug] Linker: Assemble LinkedClasses: 64598 us
-[debug] Linker: Check IR: 175307 us
-[debug] Linker: 1193931 us
+[debug] Linker: Compute reachability: 815583 us
+[debug] Linker: Assemble LinkedClasses: 69100 us
+[debug] Linker: Check IR: 262892 us
+[debug] Linker: 1202801 us
 [debug] Optimizer: Batch mode: true
-[debug] Optimizer: Incremental part: 151215 us
-[debug] Optimizer: Elidable constructors: 8302 us
-[debug] Optimizer: Optimizing 5478 methods.
-[debug] Optimizer: Optimizer part: 1341041 us
-[debug] Optimizer: 1518943 us
-[debug] Refiner: Compute reachability: 148636 us
-[debug] Refiner: Assemble LinkedClasses: 17329 us
-[debug] Refiner: 169267 us
-[debug] Module Splitter: Calculate Dependency Info: 4364 us
-[debug] Module Splitter: Analyze Modules: 70482 us
-[debug] Module Splitter: Assemble Modules: 16836 us
-[debug] Module Splitter: 95615 us
-[debug] Emitter: Generate Classes: 880098 us
-[debug] Emitter: Write trees: 74472 us
-[debug] Emitter: Class tree cache stats: reused: 0 -- invalidated: 448
-[debug] Emitter: Method tree cache stats: reused: 0 -- invalidated: 2234
-[debug] Emitter: Pre prints: 3208
-[debug] Name compressor: Collect property names to avoid: 2802 us
-[debug] Name compressor: Allocate property names: 18629 us
-[debug] Name compressor: Allocate ancestor names: 3537 us
-[debug] Emitter: 1044882 us
-[debug] BasicBackend: Write result: 292382 us
-[debug] BasicBackend: total modules: 8; re-written: 8
+[debug] Optimizer: Incremental part: 164983 us
+[debug] Optimizer: Elidable constructors: 10588 us
+[debug] Optimizer: Optimizing 5672 methods.
+[debug] Optimizer: Optimizer part: 1442056 us
+[debug] Optimizer: 1636595 us
+[debug] Refiner: Compute reachability: 129392 us
+[debug] Refiner: Assemble LinkedClasses: 18070 us
+[debug] Refiner: 152194 us
+[debug] Module Splitter: Calculate Dependency Info: 5713 us
+[debug] Module Splitter: Analyze Modules: 80386 us
+[debug] Module Splitter: Assemble Modules: 16654 us
+[debug] Module Splitter: 105440 us
+[debug] Emitter: Generate Classes: 1066319 us
+[debug] Emitter: Write trees: 77668 us
+[debug] Emitter: Class tree cache stats: reused: 0 -- invalidated: 463
+[debug] Emitter: Method tree cache stats: reused: 0 -- invalidated: 2321
+[debug] Emitter: Pre prints: 3331
+[debug] Name compressor: Collect property names to avoid: 4633 us
+[debug] Name compressor: Allocate property names: 26439 us
+[debug] Name compressor: Allocate ancestor names: 2685 us
+[debug] Emitter: 1253082 us
+[debug] BasicBackend: Write result: 542278 us
+[debug] BasicBackend: total modules: 9; re-written: 9

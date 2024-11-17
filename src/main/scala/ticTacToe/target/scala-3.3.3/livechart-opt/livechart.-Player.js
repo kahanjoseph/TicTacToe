@@ -3,10 +3,10 @@ import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./int
 var $p;
 /** @constructor */
 function $c_Llivechart_Player(turn, isAI) {
-  this.d7 = 0;
-  this.eL = false;
-  this.d7 = turn;
-  this.eL = isAI;
+  this.da = 0;
+  this.eV = false;
+  this.da = turn;
+  this.eV = isAI;
   if ((!((turn === 1) || (turn === 2)))) {
     throw $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_jl_IllegalArgumentException__T__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_jl_IllegalArgumentException(), "requirement failed: Turn must be 1 (X) or 2 (O)");
   }
@@ -19,46 +19,46 @@ function $h_Llivechart_Player() {
 }
 export { $h_Llivechart_Player as $h_Llivechart_Player };
 $h_Llivechart_Player.prototype = $p;
-$p.b9 = (function() {
+$p.bh = (function() {
   return new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_s_Product$$anon$1(this);
 });
-$p.t = (function() {
+$p.v = (function() {
   var acc = (-889275714);
   acc = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().c(acc, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$f_T__hashCode__I("Player"));
-  acc = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().c(acc, this.d7);
-  acc = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().c(acc, (this.eL ? 1231 : 1237));
-  return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().z(acc, 2);
+  acc = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().c(acc, this.da);
+  acc = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().c(acc, (this.eV ? 1231 : 1237));
+  return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_Statics$().A(acc, 2);
 });
-$p.j = (function(x$0) {
-  return ((this === x$0) || ((x$0 instanceof $c_Llivechart_Player) && ((this.d7 === x$0.d7) && (this.eL === x$0.eL))));
+$p.k = (function(x$0) {
+  return ((this === x$0) || ((x$0 instanceof $c_Llivechart_Player) && ((this.da === x$0.da) && (this.eV === x$0.eV))));
 });
-$p.v = (function() {
-  return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().fI(this);
+$p.w = (function() {
+  return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().fR(this);
 });
-$p.aW = (function() {
+$p.aZ = (function() {
   return 2;
 });
-$p.aY = (function() {
+$p.b1 = (function() {
   return "Player";
 });
-$p.aX = (function(n) {
+$p.b0 = (function(n) {
   if ((n === 0)) {
-    return this.d7;
+    return this.da;
   }
   if ((n === 1)) {
-    return this.eL;
+    return this.eV;
   }
   throw $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_jl_IndexOutOfBoundsException__T__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_jl_IndexOutOfBoundsException(), ("" + n));
 });
-$p.nw = (function() {
-  return ((this.d7 === 1) ? "X" : "O");
+$p.oo = (function() {
+  return ((this.da === 1) ? "X" : "O");
 });
 function $isArrayOf_Llivechart_Player(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.D === depth)) && obj.$classData.B.n.bp)));
+  return (!(!(((obj && obj.$classData) && (obj.$classData.D === depth)) && obj.$classData.B.n.bu)));
 }
 export { $isArrayOf_Llivechart_Player as $isArrayOf_Llivechart_Player };
 var $d_Llivechart_Player = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().i($c_Llivechart_Player, "livechart.Player", ({
-  bp: 1,
+  bu: 1,
   d: 1,
   E: 1,
   a: 1

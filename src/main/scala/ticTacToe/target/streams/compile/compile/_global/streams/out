@@ -1,7 +1,38 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\xampp\htdocs\site_every_day\ticTacToe\src\main\scala\ticTacToe\Main.scala:83:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m83 |[0m        gameing.set([31mfalse[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m        Not found: gameing[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E040] Syntax Error: C:\ticTacToe\src\main\scala\ticTacToe\Main.scala:224:0 -[0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m224 |[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0meof expected, but '}' found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: C:\ticTacToe\src\main\scala\ticTacToe\Main.scala:123:4 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m123 |[0m    child <-- isModalVisible.signal.map { [36mvisible[0m =>[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m    ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m    Found:    com.raquo.laminar.[1m[31minserters[0m.[1m[31mDynamicInserter[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m    Required: com.raquo.laminar.[1m[32mapi[0m.[1m[32mL[0m[1m[32m.[0m[1m[32mElement[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m124 |[0m      [33mif[0m (visible) ModalComponent(modalTitle, hideModal, isModalVisible.signal) [33melse[0m emptyNode[0m
+[0m[[0m[31merror[0m] [0m[0m[31m125 |[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\ticTacToe\src\main\scala\ticTacToe\Main.scala:145:30 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m145 |[0m    gaming.signal.addObserver(gamingObserver)(localOwner)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                              ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m                              Not found: gamingObserver[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\ticTacToe\src\main\scala\ticTacToe\Main.scala:145:46 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m145 |[0m    gaming.signal.addObserver(gamingObserver)(localOwner)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                                              ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m                                              Not found: localOwner[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\ticTacToe\src\main\scala\ticTacToe\Main.scala:159:40 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m159 |[0m      .addObserver(currentTurnObserver)(localOwner)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                                        ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m                                        Not found: localOwner[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\ticTacToe\src\main\scala\ticTacToe\Main.scala:175:37 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m175 |[0m      .addObserver(gameOverObserver)(localOwner)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                                     ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m                                     Not found: localOwner[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
