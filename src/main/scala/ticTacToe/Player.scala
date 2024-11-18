@@ -4,7 +4,7 @@ package livechart
 case class Player (turn: Int, isAI: Boolean){
   require(turn == 1 || turn == 2, "Turn must be 1 (X) or 2 (O)")
 
-  def playerToString: String = {
+  override def toString: String = {
     if (turn == 1) "X" else "O"
   }
 

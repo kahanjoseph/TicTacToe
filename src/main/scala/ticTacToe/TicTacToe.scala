@@ -46,7 +46,7 @@ case class TicTacToe(
             localBoard(line(0)._1)(line(0)._2) == localBoard(line(2)._1)(line(2)._2)
         ) {
           won = localBoard(line(0)._1)(line(0)._2)
-          println(s"GAME OVER!! ${if (currentTurn == player1) player1.playerToString else player2.playerToString} has won!!")
+          println(s"GAME OVER!! ${if (currentTurn == player1) player1.toString else player2.toString} has won!!")
           break // Exit the loop if a winning line is found
         }
       }
